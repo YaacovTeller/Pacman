@@ -1,0 +1,6 @@
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\obj\Debug\Pac_Library.csproj.CoreCompileInputs.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\bin\Debug\Pac_Library.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\bin\Debug\Pac_Library.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\obj\Debug\Pac_Library.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\obj\Debug\Pac_Library.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pac_Library\obj\Debug\Pac_Library.csprojAssemblyReference.cache

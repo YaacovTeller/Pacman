@@ -1,0 +1,13 @@
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.csprojAssemblyReference.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.Properties.Resources.resources
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.csproj.GenerateResource.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.csproj.CoreCompileInputs.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\bin\Debug\Pacman_new.exe.config
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\bin\Debug\Pacman_new.exe
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\bin\Debug\Pacman_new.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\bin\Debug\Pac_Library.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\bin\Debug\Pac_Library.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.Form1.resources
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.csproj.CopyComplete
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.exe
+C:\Users\Rivka and Yaacov\source\repos\C#\Pacman_new\Pacman_new\obj\Debug\Pacman_new.pdb

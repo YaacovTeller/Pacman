@@ -234,14 +234,16 @@ namespace Pacman_new
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-
+        //This filter thing seems to detect the KEYUP code:
+        //I make it cut all four movement flags, which works after a fashion, but results in awkward movement.
+        //It really needs to detect WHICH key went up, but the function can only recieve one arg, the message data:
         public bool PreFilterMessage(ref Message m)
         {
-            if (m.Msg == 0x101) { flagRight = false; flagUp = false; flagLeft = false; }
+            if (m.Msg == 0x101) { flagRight = false; flagUp = false; flagLeft = false; flagDown = false; }
             return false;
         }
 
-        //KEYUP doesn't work here:
+        //OVERRIDING KEYS w/o IMessageFilter - KEYUP doesn't work here, don't know why:
 
         //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         //{
@@ -293,7 +295,7 @@ namespace Pacman_new
         //    return true;
         //}
 
-        //NORMAL -- Without overrides -- Doesn't allow for buttons:
+        //NORMAL CONTROL SET -- Without overrides -- Doesn't allow for buttons, arrowkeys tab between buttons:
 
         //private void Form1_KeyDown(object sender, KeyEventArgs e)
         //{

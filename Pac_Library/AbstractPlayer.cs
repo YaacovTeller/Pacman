@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     [Serializable]
     public abstract class AbstractPlayer : IVisualPlayer
@@ -38,10 +38,8 @@ namespace PacLibrary_WinForm
 
         public bool IsCrashed(IVisualPlayer player)
         {
-
             bool overlapXCoordinate = CrashElementsHelper.IsTwoNumberBetweenRangeOfTowNumbers
                 (this.X, this.XEnd, player.X, player.XEnd);
-
 
             bool overlapYCoordinate = CrashElementsHelper.IsTwoNumberBetweenRangeOfTowNumbers
                 (this.Y, this.YEnd, player.Y, player.YEnd);
@@ -49,7 +47,18 @@ namespace PacLibrary_WinForm
             bool crashed = overlapXCoordinate && overlapYCoordinate;
 
             return crashed;
+        }
+        public bool IsCrashed(StaticItem item)
+        {
+            bool overlapXCoordinate = CrashElementsHelper.IsTwoNumberBetweenRangeOfTowNumbers
+                (this.X, this.XEnd, item.X, item.XEnd);
 
+            bool overlapYCoordinate = CrashElementsHelper.IsTwoNumberBetweenRangeOfTowNumbers
+                (this.Y, this.YEnd, item.Y, item.YEnd);
+
+            bool crashed = overlapXCoordinate && overlapYCoordinate;
+
+            return crashed;
         }
     }
 }

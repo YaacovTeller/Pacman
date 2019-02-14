@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     public class GameHelper
     {
@@ -27,6 +27,10 @@ namespace PacLibrary_WinForm
         public static bool IsCrashedTwoElement(IVisualPlayer player1, IVisualPlayer player2)
         {
             return player1.IsCrashed(player2);
+        }
+        public static bool IsCrashedTwoElement(IVisualPlayer player1, StaticItem item)
+        {
+            return player1.IsCrashed(item);
         }
     }
 }

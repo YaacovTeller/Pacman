@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     public class Pacman : AbstractPlayer
     {
         public Pacman()
         {
             this.pacmanImage = new PictureBox();
-            this.pacmanImage.ImageLocation = "C:/Users/Rivka and Yaacov/source/repos/C#/Pacman_new/Pacman_new/assets/pacman_gifs/pac_E.gif";
+            this.pacmanImage.ImageLocation = "../../assets/pacman_gifs/pac_E.gif";
             this.pacmanImage.Location = new Point(100, 300);
             this.pacmanImage.Size = new Size(50, 50);
+            //          this.pacmanImage.BackgroundImage = new Bitmap("../../assets/Transparent.png");
             pacmanImage.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         public int speed;
-
+        
         public PictureBox pacmanImage { get; set; }
 
         public override int X => this.pacmanImage.Left;
@@ -54,6 +55,5 @@ namespace PacLibrary_WinForm
         {
             this.pacmanImage.Top -= speed;
         }
-
     }
 }

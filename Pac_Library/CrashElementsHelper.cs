@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     public static class CrashElementsHelper
     {

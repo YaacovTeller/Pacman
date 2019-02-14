@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     public interface IVisualPlayer :
         IHaveCoordinatesXandY,
         IHaveWidthAndHeight,
-        IMoveableElement,
         IHaveStartAndEndAboutXAndY,
-        ICrashedWithAnotherElement
+        ICrashedWithAnotherElement,
+        IMoveableElement
     {
     }
     public interface IHaveWidthAndHeight
@@ -43,5 +43,6 @@ namespace PacLibrary_WinForm
     public interface ICrashedWithAnotherElement
     {
         bool IsCrashed(IVisualPlayer player);
+        bool IsCrashed(StaticItem item);
     }
 }

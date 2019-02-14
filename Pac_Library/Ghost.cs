@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace PacLibrary_WinForm
+namespace Pac_Library
 {
     [Serializable]
     public class Ghost : AbstractPlayer
@@ -14,6 +14,8 @@ namespace PacLibrary_WinForm
         public string name;
         public static int ghostIndex = 1;
         public int speed;
+        public int damage;
+        public string compass = "E";
         public Ghost()
         {
             switch (ghostIndex)
@@ -21,31 +23,36 @@ namespace PacLibrary_WinForm
                 case 1:
                     name = "inky";
                     speed = 1;
+                    damage = 10;
                     break;
                 case 2:
                     name = "clyde";
                     speed = 2;
+                    damage = 7;
                     break;
                 case 3:
                     name = "pinky";
                     speed = 3;
+                    damage = 5;
                     break;
                 case 4:
                     name = "blinky";
                     speed = 4;
+                    damage = 3;
                     break;
             }
 
             this.ghostImage = new PictureBox();
-            this.ghostImage.ImageLocation = "../../assets/ghost_" + Ghost.ghostIndex + ".png";
+            this.ghostImage.ImageLocation = "../../assets/ghosts/" + Ghost.ghostIndex+ "_" + compass + ".gif";
             if (Ghost.ghostIndex == 4) { Ghost.ghostIndex = 1; }
             else Ghost.ghostIndex++;
             this.ghostImage.Location = new Point (100,100);
             this.ghostImage.Size = new Size(50,50);
+            this.ghostImage.BackColor = Color.Transparent;
             ghostImage.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
-        public PictureBox ghostImage { get; set; }
+        [NonSerialized]
+        public PictureBox ghostImage;
 
         public override int X => this.ghostImage.Left;
 
@@ -54,6 +61,12 @@ namespace PacLibrary_WinForm
         public override int Width => this.ghostImage.Width;
 
         public override int Height => this.ghostImage.Height;
+
+        public void setGhostDirectionImage(string comp)
+        {
+            this.compass = comp;
+            this.ghostImage.ImageLocation = "../../assets/ghosts/" + speed + "_" + compass + ".gif";
+        }
 
         public override void MoveDown()
         {
@@ -73,22 +86,6 @@ namespace PacLibrary_WinForm
         public override void MoveUp()
         {
             this.ghostImage.Top -= speed;
-        }
-
-        public static Random rand = new Random();
-        public static int randomX;
-        public static int randomY;
-        public static void randLoc()
-        {
-            var hgt = 770;
-            var wdth = 1400;
-            randomX = rand.Next(1, wdth);
-            randomY = rand.Next(1, hgt);
-        }
-        public void setRandLoc(int rX, int rY)
-        {
-            this.ghostImage.Top =  rY;
-            this.ghostImage.Left = rX;
         }
     }
 }
